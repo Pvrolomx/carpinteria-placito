@@ -181,7 +181,7 @@ export default function Home() {
           backgroundImage: `repeating-linear-gradient(92deg,transparent 0px,transparent 3px,rgba(139,105,20,0.3) 3px,rgba(139,105,20,0.3) 4px)`
         }} />
         <div className="relative z-10 max-w-2xl fade-in">
-          <div className="text-6xl mb-6">🪵</div>
+          <img src="/logo.png" alt="Carpintería Placito" className="w-40 h-40 sm:w-52 sm:h-52 mx-auto mb-6 drop-shadow-lg" />
           <h1 className="font-playfair text-4xl sm:text-5xl md:text-6xl font-bold text-[#2C1810] leading-tight mb-4">
             Carpintería Placito
           </h1>
