@@ -255,21 +255,21 @@ export default function Home() {
           </h2>
           <p className="text-center text-[#8B6914] mb-12 fade-in">{t.gallery.subtitle[lang]}</p>
           {gallery.length > 0 ? (
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
               {gallery.map((item, i) => (
-                <div key={i} className="fade-in group relative aspect-[4/3] rounded-xl overflow-hidden shadow-sm border border-[#e8dcc8]">
-                  <img src={item.src} alt={item.title} loading="lazy" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                <div key={i} className="fade-in group relative aspect-[3/2] rounded-xl overflow-hidden shadow-sm border border-[#e8dcc8]">
+                  <img src={item.src} alt={item.title[lang]} loading="lazy" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#2C1810]/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
                     <div className="text-white">
-                      <p className="font-playfair font-bold">{item.title}</p>
-                      <p className="text-sm opacity-80">{item.material}</p>
+                      <p className="font-playfair font-bold">{item.title[lang]}</p>
+                      <p className="text-sm opacity-80">{item.material[lang]}</p>
                     </div>
                   </div>
                 </div>
               ))}
             </div>
           ) : (
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
               {toolIcons.map((ti, i) => (
                 <div key={i} className="fade-in aspect-[4/3] rounded-xl border-2 border-dashed border-[#d4c4a8] flex flex-col items-center justify-center bg-gradient-to-br from-[#F5F0E8] to-[#efe5d4] hover:border-[#8B6914] transition-colors">
                   <span className="text-5xl mb-3 opacity-60">{ti.icon}</span>
