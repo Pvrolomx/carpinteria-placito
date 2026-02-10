@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, useCallback } from "react";
 import { config } from "@/lib/config";
 import { gallery } from "@/lib/gallery";
 import {
@@ -101,6 +101,109 @@ function LangToggle({ lang, setLang }: { lang: Lang; setLang: (l: Lang) => void 
   );
 }
 
+/* ─── Lightbox con swipe ─── */
+function Lightbox({
+  images,
+  currentIndex,
+  onClose,
+  onPrev,
+  onNext,
+}: {
+  images: { src: string }[];
+  currentIndex: number;
+  onClose: () => void;
+  onPrev: () => void;
+  onNext: () => void;
+}) {
+  const touchStartX = useRef(0);
+  const touchEndX = useRef(0);
+
+  const handleKeyDown = useCallback(
+    (e: KeyboardEvent) => {
+      if (e.key === "Escape") onClose();
+      if (e.key === "ArrowLeft") onPrev();
+      if (e.key === "ArrowRight") onNext();
+    },
+    [onClose, onPrev, onNext]
+  );
+
+  useEffect(() => {
+    document.addEventListener("keydown", handleKeyDown);
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+      document.body.style.overflow = "";
+    };
+  }, [handleKeyDown]);
+
+  const handleTouchStart = (e: React.TouchEvent) => {
+    touchStartX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    touchEndX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchEnd = () => {
+    const diff = touchStartX.current - touchEndX.current;
+    if (Math.abs(diff) > 50) {
+      if (diff > 0) onNext();
+      else onPrev();
+    }
+  };
+
+  return (
+    <div
+      className="fixed inset-0 z-[100] bg-black/95 flex items-center justify-center"
+      onClick={onClose}
+      onTouchStart={handleTouchStart}
+      onTouchMove={handleTouchMove}
+      onTouchEnd={handleTouchEnd}
+    >
+      {/* Close */}
+      <button
+        onClick={onClose}
+        className="absolute top-4 right-4 z-[110] text-white/80 hover:text-white text-4xl font-light w-12 h-12 flex items-center justify-center"
+        aria-label="Cerrar"
+      >
+        ×
+      </button>
+
+      {/* Counter */}
+      <div className="absolute top-5 left-1/2 -translate-x-1/2 text-white/60 text-sm font-mono">
+        {currentIndex + 1} / {images.length}
+      </div>
+
+      {/* Prev */}
+      <button
+        onClick={(e) => { e.stopPropagation(); onPrev(); }}
+        className="absolute left-2 sm:left-6 top-1/2 -translate-y-1/2 z-[110] text-white/60 hover:text-white text-5xl font-light w-12 h-16 flex items-center justify-center"
+        aria-label="Anterior"
+      >
+        ‹
+      </button>
+
+      {/* Image */}
+      <img
+        src={images[currentIndex].src}
+        alt=""
+        onClick={(e) => e.stopPropagation()}
+        className="max-w-[90vw] max-h-[85vh] object-contain rounded-lg shadow-2xl select-none"
+        draggable={false}
+      />
+
+      {/* Next */}
+      <button
+        onClick={(e) => { e.stopPropagation(); onNext(); }}
+        className="absolute right-2 sm:right-6 top-1/2 -translate-y-1/2 z-[110] text-white/60 hover:text-white text-5xl font-light w-12 h-16 flex items-center justify-center"
+        aria-label="Siguiente"
+      >
+        ›
+      </button>
+    </div>
+  );
+}
+
 /* ─── FAQ Accordion ─── */
 function FAQ({ lang }: { lang: Lang }) {
   const [open, setOpen] = useState<number | null>(null);
@@ -141,6 +244,7 @@ function FAQ({ lang }: { lang: Lang }) {
 /* ═══════════════════════════════════════════ */
 export default function Home() {
   const [lang, setLang] = useState<Lang>("es");
+  const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
   const pageRef = useFadeIn();
   const years = config.business.years;
   const testimonials = testimonialTranslations[lang];
@@ -158,10 +262,28 @@ export default function Home() {
     return () => obs.disconnect();
   }, [lang]);
 
+  const openLightbox = (i: number) => setLightboxIndex(i);
+  const closeLightbox = () => setLightboxIndex(null);
+  const prevImage = () =>
+    setLightboxIndex((prev) => (prev !== null ? (prev - 1 + gallery.length) % gallery.length : null));
+  const nextImage = () =>
+    setLightboxIndex((prev) => (prev !== null ? (prev + 1) % gallery.length : null));
+
   return (
     <main ref={pageRef} className="grain wood-grain min-h-screen">
       <LangToggle lang={lang} setLang={setLang} />
       <WhatsAppFloat lang={lang} />
+
+      {/* Lightbox */}
+      {lightboxIndex !== null && (
+        <Lightbox
+          images={gallery}
+          currentIndex={lightboxIndex}
+          onClose={closeLightbox}
+          onPrev={prevImage}
+          onNext={nextImage}
+        />
+      )}
 
       {/* ═══ HERO ═══ */}
       <section className="relative min-h-[90vh] flex flex-col items-center justify-center px-6 text-center">
@@ -253,10 +375,19 @@ export default function Home() {
           <p className="text-center text-[#8B6914] mb-12 fade-in">{t.gallery.subtitle[lang]}</p>
           <div className="columns-2 md:columns-3 gap-4 space-y-4">
             {gallery.map((item, i) => (
-              <div key={i} className="fade-in group relative break-inside-avoid rounded-xl overflow-hidden shadow-sm border border-[#e8dcc8]">
-                <img src={item.src} alt={item.title[lang]} loading="lazy" className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500" />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#2C1810]/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
-                  <p className="font-playfair font-bold text-white drop-shadow-lg">{item.title[lang]}</p>
+              <div
+                key={i}
+                className="fade-in group relative break-inside-avoid rounded-xl overflow-hidden shadow-sm border border-[#e8dcc8] cursor-pointer"
+                onClick={() => openLightbox(i)}
+              >
+                <img
+                  src={item.src}
+                  alt=""
+                  loading="lazy"
+                  className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors flex items-center justify-center">
+                  <span className="text-white text-3xl opacity-0 group-hover:opacity-80 transition-opacity drop-shadow-lg">⊕</span>
                 </div>
               </div>
             ))}
