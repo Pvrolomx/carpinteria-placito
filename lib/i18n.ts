@@ -63,8 +63,8 @@ export const t = {
           en: (years: number) => `${years} years — family dynasty`,
         },
         desc: {
-          es: "Fundada por Lucas Plácito en 1982. Hoy sus hijos continúan la tradición.",
-          en: "Founded by Lucas Plácito in 1982. Today his sons carry on the tradition.",
+          es: "Fundada por Don Lucas Plácito en 1982. Hoy sus hijos continúan la tradición.",
+          en: "Founded by Don Lucas Plácito in 1982. Today his sons carry on the tradition.",
         },
       },
       {
@@ -136,15 +136,15 @@ export const t = {
       {
         q: { es: "¿Garantizas tu trabajo?", en: "Do you guarantee your work?" },
         a: {
-          es: "Sí. Respaldamos cada mueble que sale del taller. Si algo no queda como lo acordamos, lo arreglamos. Nuestro nombre está en cada pieza y eso nos lo tomamos en serio.",
-          en: "Yes. We stand behind every piece that leaves our workshop. If something isn't as agreed, we fix it. Our name is on every piece and we take that seriously.",
+          es: "Sí. Si algo no queda como lo acordamos, lo arreglamos sin costo adicional. Llevamos más de 40 años trabajando así.",
+          en: "Yes. If something isn't as agreed, we fix it at no extra cost. We've been working this way for over 40 years.",
         },
       },
       {
         q: { es: "¿Haces reparaciones o solo muebles nuevos?", en: "Do you do repairs or only new furniture?" },
         a: {
-          es: "Hacemos las dos cosas. Restauramos muebles antiguos, reparamos puertas, ajustamos closets y le damos nueva vida a piezas que ya tienen historia.",
-          en: "We do both. We restore antique furniture, repair doors, adjust closets, and bring new life to pieces that already have history.",
+          es: "Ambos. Restauramos muebles antiguos, reparamos puertas, ajustamos closets y le damos nueva vida a piezas que ya tienen historia.",
+          en: "Both. We restore antique furniture, repair doors, adjust closets, and bring new life to pieces that already have history.",
         },
       },
       {
