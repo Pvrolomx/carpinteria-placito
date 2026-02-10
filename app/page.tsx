@@ -181,17 +181,11 @@ export default function Home() {
           backgroundImage: `repeating-linear-gradient(92deg,transparent 0px,transparent 3px,rgba(139,105,20,0.3) 3px,rgba(139,105,20,0.3) 4px)`
         }} />
         <div className="relative z-10 max-w-2xl fade-in">
+          <h1 className="sr-only">Carpintería Placito — Desde 1982</h1>
           <img src="/logo.png" alt="Carpintería Placito" className="w-40 h-40 sm:w-52 sm:h-52 mx-auto mb-6 drop-shadow-lg" />
-          <h1 className="font-playfair text-4xl sm:text-5xl md:text-6xl font-bold text-[#2C1810] leading-tight mb-4">
-            Carpintería Placito
-          </h1>
-          <p className="text-xl sm:text-2xl text-[#8B6914] font-playfair italic mb-2">
-            {t.hero.subtitle[lang]}
-          </p>
-          <p className="text-lg sm:text-xl text-[#5a4a3a] mb-10 max-w-lg mx-auto whitespace-pre-line">
+          <p className="text-lg sm:text-xl text-[#5a4a3a] max-w-lg mx-auto whitespace-pre-line">
             {t.hero.tagline[lang]}
           </p>
-          <WhatsAppBtn lang={lang} large />
         </div>
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 text-[#A0784C] animate-bounce text-2xl">↓</div>
       </section>
