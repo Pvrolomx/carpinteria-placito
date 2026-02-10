@@ -16,58 +16,37 @@ export const t = {
     },
   },
   history: {
-    title: {
-      es: "Nuestra Historia",
-      en: "Our Story",
-    },
+    title: { es: "Nuestra Historia", en: "Our Story" },
     quote: {
       es: (years: number) =>
         `"Empecé con un serrucho y un banco de trabajo. ${years} años después, sigo usando madera de verdad. Cada mueble que sale de este taller lleva el mismo cuidado que el primero que hice."`,
       en: (years: number) =>
         `"I started with a handsaw and a workbench. ${years} years later, I still use real wood. Every piece that leaves this workshop carries the same care as the first one I ever made."`,
     },
-    founder: {
-      es: "— Lucas Plácito, fundador",
-      en: "— Lucas Plácito, founder",
-    },
+    founder: { es: "— Lucas Plácito, fundador", en: "— Lucas Plácito, founder" },
     dynasty: {
       es: "Una dinastía familiar de carpinteros. Hoy, todos los hijos de Don Lucas continúan el oficio en el mismo taller.",
       en: "A family dynasty of woodworkers. Today, all of Don Lucas' sons carry on the craft in the same workshop.",
     },
-    timelineStart: {
-      es: "Un serrucho y un sueño",
-      en: "A saw and a dream",
-    },
+    timelineStart: { es: "Un serrucho y un sueño", en: "A saw and a dream" },
     timelineEnd: {
       es: (years: number) => `${years} años de oficio`,
       en: (years: number) => `${years} years of craft`,
     },
-    today: {
-      es: "Hoy",
-      en: "Today",
-    },
+    today: { es: "Hoy", en: "Today" },
   },
   services: {
-    title: {
-      es: "Lo Que Hacemos",
-      en: "What We Do",
-    },
+    title: { es: "Lo Que Hacemos", en: "What We Do" },
   },
   gallery: {
-    title: {
-      es: "Nuestro Trabajo",
-      en: "Our Work",
-    },
+    title: { es: "Nuestro Trabajo", en: "Our Work" },
     subtitle: {
       es: "Cada pieza, hecha a mano en nuestro taller",
       en: "Every piece, handmade in our workshop",
     },
   },
   why: {
-    title: {
-      es: "Por Qué Elegirnos",
-      en: "Why Choose Us",
-    },
+    title: { es: "Por Qué Elegirnos", en: "Why Choose Us" },
     items: [
       {
         icon: "🪵",
@@ -107,72 +86,48 @@ export const t = {
     ],
   },
   testimonials: {
-    title: {
-      es: "Lo Que Dicen Nuestros Clientes",
-      en: "What Our Clients Say",
-    },
+    title: { es: "Lo Que Dicen Nuestros Clientes", en: "What Our Clients Say" },
   },
   faq: {
-    title: {
-      es: "Preguntas Frecuentes",
-      en: "Frequently Asked Questions",
-    },
+    title: { es: "Preguntas Frecuentes", en: "Frequently Asked Questions" },
     items: [
       {
-        q: {
-          es: "¿Cuánto tiempo tarda un mueble a medida?",
-          en: "How long does a custom piece take?",
-        },
+        q: { es: "¿Cuánto tiempo tarda un mueble a medida?", en: "How long does a custom piece take?" },
         a: {
           es: "Depende del tamaño y complejidad. Una cocina integral puede tomar 2-4 semanas. Un mueble pequeño, 1-2 semanas. Te damos fecha exacta al cotizar.",
           en: "It depends on size and complexity. A full kitchen can take 2-4 weeks. A smaller piece, 1-2 weeks. We give you an exact date with your quote.",
         },
       },
       {
-        q: {
-          es: "¿Trabajan solo con madera real?",
-          en: "Do you only work with real wood?",
-        },
+        q: { es: "¿Trabajan solo con madera real?", en: "Do you only work with real wood?" },
         a: {
           es: "Nuestra especialidad es madera maciza (cedro, roble, parota, pino). También ofrecemos aglomerado como opción económica para quien lo necesite.",
           en: "Our specialty is solid wood (cedar, oak, parota, pine). We also offer particleboard as a budget-friendly option for those who need it.",
         },
       },
       {
-        q: {
-          es: "¿Hacen envíos fuera de Puerto Vallarta?",
-          en: "Do you ship outside Puerto Vallarta?",
-        },
+        q: { es: "¿Hacen envíos fuera de Puerto Vallarta?", en: "Do you ship outside Puerto Vallarta?" },
         a: {
           es: "Trabajamos principalmente en Puerto Vallarta y Bahía de Banderas. Para proyectos especiales fuera de la zona, platícanos por WhatsApp.",
           en: "We primarily serve Puerto Vallarta and Bahía de Banderas. For special projects outside the area, reach out via WhatsApp.",
         },
       },
       {
-        q: {
-          es: "¿Puedo ver ejemplos de su trabajo?",
-          en: "Can I see examples of your work?",
-        },
+        q: { es: "¿Puedo ver ejemplos de su trabajo?", en: "Can I see examples of your work?" },
         a: {
           es: "¡Claro! Mándanos un WhatsApp y con gusto te compartimos fotos de trabajos recientes. También puedes visitar el taller.",
           en: "Of course! Send us a WhatsApp and we'll gladly share photos of recent work. You can also visit the workshop.",
         },
       },
       {
-        q: {
-          es: "¿Cómo funciona el proceso de cotización?",
-          en: "How does the quoting process work?",
-        },
+        q: { es: "¿Cómo funciona el proceso de cotización?", en: "How does the quoting process work?" },
         a: {
           es: "1) Nos mandas un WhatsApp con lo que necesitas. 2) Te hacemos preguntas sobre medidas y material. 3) Te damos precio y tiempo de entrega. Sin compromiso.",
           en: "1) Send us a WhatsApp with what you need. 2) We ask about measurements and materials. 3) We give you a price and delivery time. No obligation.",
         },
       },
       {
-        q: {
-          es: "¿Ofrecen garantía?",
-          en: "Do you offer a warranty?",
-        },
+        q: { es: "¿Ofrecen garantía?", en: "Do you offer a warranty?" },
         a: {
           es: "Sí. Todos nuestros muebles tienen garantía. Si algo no queda como acordamos, lo arreglamos sin costo.",
           en: "Yes. All our furniture comes with a warranty. If something isn't as agreed, we fix it at no cost.",
@@ -181,39 +136,50 @@ export const t = {
     ],
   },
   cta: {
-    title: {
-      es: "¿Listo para tu mueble?",
-      en: "Ready for your furniture?",
-    },
+    title: { es: "¿Listo para tu mueble?", en: "Ready for your furniture?" },
     subtitle: {
       es: "Cuéntanos qué necesitas. Sin compromiso, sin complicaciones.",
       en: "Tell us what you need. No commitment, no hassle.",
     },
   },
   footer: {
-    tagline: {
-      es: "Hecho con 🪵 y orgullo",
-      en: "Made with 🪵 and pride",
-    },
+    tagline: { es: "Hecho con 🪵 y orgullo", en: "Made with 🪵 and pride" },
   },
 };
 
-export const serviceTranslations = {
-  es: [
-    { icon: "🍳", title: "Cocinas integrales", description: "Diseñadas a la medida de tu espacio" },
-    { icon: "👔", title: "Closets y vestidores", description: "Aprovecha cada centímetro" },
-    { icon: "🪑", title: "Muebles a medida", description: "Exactamente como lo imaginas" },
-    { icon: "🚪", title: "Puertas y marcos", description: "Madera sólida que dura décadas" },
-    { icon: "🔧", title: "Restauración", description: "Devolvemos la vida a muebles antiguos" },
-  ],
-  en: [
-    { icon: "🍳", title: "Custom kitchens", description: "Designed to fit your space" },
-    { icon: "👔", title: "Closets & wardrobes", description: "Make the most of every inch" },
-    { icon: "🪑", title: "Custom furniture", description: "Exactly as you imagine it" },
-    { icon: "🚪", title: "Doors & frames", description: "Solid wood that lasts decades" },
-    { icon: "🔧", title: "Restoration", description: "We bring old furniture back to life" },
-  ],
-};
+export interface ServiceItem {
+  image: string;
+  title: { es: string; en: string };
+  description: { es: string; en: string };
+}
+
+export const serviceItems: ServiceItem[] = [
+  {
+    image: "/fotos/cocina-integral.jpg",
+    title: { es: "Cocinas integrales", en: "Custom kitchens" },
+    description: { es: "Diseñadas a la medida de tu espacio", en: "Designed to fit your space" },
+  },
+  {
+    image: "/fotos/closet-vestidor.jpg",
+    title: { es: "Closets y vestidores", en: "Closets & wardrobes" },
+    description: { es: "Aprovecha cada centímetro", en: "Make the most of every inch" },
+  },
+  {
+    image: "/fotos/mueble-medida.jpg",
+    title: { es: "Muebles a medida", en: "Custom furniture" },
+    description: { es: "Exactamente como lo imaginas", en: "Exactly as you imagine it" },
+  },
+  {
+    image: "/fotos/puerta-principal.jpg",
+    title: { es: "Puertas y marcos", en: "Doors & frames" },
+    description: { es: "Madera sólida que dura décadas", en: "Solid wood that lasts decades" },
+  },
+  {
+    image: "/fotos/restauracion.jpg",
+    title: { es: "Restauración", en: "Restoration" },
+    description: { es: "Devolvemos la vida a muebles antiguos", en: "We bring old furniture back to life" },
+  },
+];
 
 export const testimonialTranslations = {
   es: [

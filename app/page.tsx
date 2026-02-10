@@ -6,7 +6,7 @@ import { gallery } from "@/lib/gallery";
 import {
   Lang,
   t,
-  serviceTranslations,
+  serviceItems,
   testimonialTranslations,
 } from "@/lib/i18n";
 
@@ -153,7 +153,6 @@ export default function Home() {
   const [lang, setLang] = useState<Lang>("es");
   const pageRef = useFadeIn();
   const years = config.business.years;
-  const services = serviceTranslations[lang];
   const testimonials = testimonialTranslations[lang];
 
   // Re-trigger fade-in on lang change
@@ -229,16 +228,24 @@ export default function Home() {
 
       {/* ═══ SERVICIOS ═══ */}
       <section className="py-20 px-6 bg-[#F5F0E8]/50">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-5xl mx-auto">
           <h2 className="font-playfair text-3xl sm:text-4xl font-bold text-center mb-12 text-[#2C1810] fade-in">
             {t.services.title[lang]}
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {services.map((s, i) => (
-              <div key={i} className="fade-in bg-white/70 rounded-xl p-6 text-center shadow-sm border border-[#e8dcc8] hover:shadow-md hover:-translate-y-1 transition-all">
-                <div className="text-4xl mb-3">{s.icon}</div>
-                <h3 className="font-playfair text-xl font-bold text-[#2C1810] mb-1">{s.title}</h3>
-                <p className="text-[#5a4a3a] text-sm">{s.description}</p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            {serviceItems.map((s, i) => (
+              <div key={i} className="fade-in group relative aspect-[4/3] rounded-xl overflow-hidden shadow-md">
+                <img
+                  src={s.image}
+                  alt={s.title[lang]}
+                  loading="lazy"
+                  className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#2C1810]/90 via-[#2C1810]/40 to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 p-5">
+                  <h3 className="font-playfair text-xl font-bold text-white mb-1 drop-shadow-lg">{s.title[lang]}</h3>
+                  <p className="text-[#e8dcc8] text-sm drop-shadow">{s.description[lang]}</p>
+                </div>
               </div>
             ))}
           </div>
