@@ -136,16 +136,6 @@ function FAQ({ lang }: { lang: Lang }) {
   );
 }
 
-/* ─── Tool icons for gallery placeholders ─── */
-const toolIcons = [
-  { icon: "🪚", label: { es: "Cocina integral", en: "Custom kitchen" } },
-  { icon: "🪵", label: { es: "Closet de cedro", en: "Cedar closet" } },
-  { icon: "🔨", label: { es: "Mesa de comedor", en: "Dining table" } },
-  { icon: "📐", label: { es: "Puerta de parota", en: "Parota door" } },
-  { icon: "🪑", label: { es: "Mueble de baño", en: "Bathroom vanity" } },
-  { icon: "🛠️", label: { es: "Librero a medida", en: "Custom bookshelf" } },
-];
-
 /* ═══════════════════════════════════════════ */
 /*                 MAIN PAGE                   */
 /* ═══════════════════════════════════════════ */
@@ -256,35 +246,21 @@ export default function Home() {
 
       {/* ═══ GALERÍA ═══ */}
       <section className="py-20 px-6">
-        <div className="max-w-5xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           <h2 className="font-playfair text-3xl sm:text-4xl font-bold text-center mb-4 text-[#2C1810] fade-in">
             {t.gallery.title[lang]}
           </h2>
           <p className="text-center text-[#8B6914] mb-12 fade-in">{t.gallery.subtitle[lang]}</p>
-          {gallery.length > 0 ? (
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-              {gallery.map((item, i) => (
-                <div key={i} className="fade-in group relative aspect-[3/2] rounded-xl overflow-hidden shadow-sm border border-[#e8dcc8]">
-                  <img src={item.src} alt={item.title[lang]} loading="lazy" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#2C1810]/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
-                    <div className="text-white">
-                      <p className="font-playfair font-bold">{item.title[lang]}</p>
-                      <p className="text-sm opacity-80">{item.material[lang]}</p>
-                    </div>
-                  </div>
+          <div className="columns-2 md:columns-3 gap-4 space-y-4">
+            {gallery.map((item, i) => (
+              <div key={i} className="fade-in group relative break-inside-avoid rounded-xl overflow-hidden shadow-sm border border-[#e8dcc8]">
+                <img src={item.src} alt={item.title[lang]} loading="lazy" className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#2C1810]/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                  <p className="font-playfair font-bold text-white drop-shadow-lg">{item.title[lang]}</p>
                 </div>
-              ))}
-            </div>
-          ) : (
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-              {toolIcons.map((ti, i) => (
-                <div key={i} className="fade-in aspect-[4/3] rounded-xl border-2 border-dashed border-[#d4c4a8] flex flex-col items-center justify-center bg-gradient-to-br from-[#F5F0E8] to-[#efe5d4] hover:border-[#8B6914] transition-colors">
-                  <span className="text-5xl mb-3 opacity-60">{ti.icon}</span>
-                  <span className="text-[#8B6914] font-playfair text-sm">{ti.label[lang]}</span>
-                </div>
-              ))}
-            </div>
-          )}
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
