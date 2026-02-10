@@ -211,15 +211,15 @@ export const serviceItems: ServiceItem[] = [
 
 export const testimonialTranslations = {
   es: [
-    { quote: "Mi cocina lleva 15 años y está como nueva. La madera de verdad se nota.", name: "Doña Martha", detail: "Cliente desde 2010" },
-    { quote: "Le pedí un mueble para la sala y quedó exactamente como lo imaginé.", name: "Roberto", detail: "Cliente desde 2018" },
-    { quote: "Restauraron el ropero de mi abuela. Quedó mejor que cuando era nuevo.", name: "Familia García", detail: "Cliente desde 2015" },
-    { quote: "Nada que ver con los muebles de tienda. Esto es otro nivel.", name: "Carlos y Ana", detail: "Cliente desde 2022" },
+    { quote: "Mi cocina lleva 15 años y está como nueva. La madera de verdad se nota.", name: "Ángela Aguilar", detail: "Cliente desde 2010" },
+    { quote: "Le pedí un mueble para la sala y quedó exactamente como lo imaginé.", name: "El Señor de los Cielos", detail: "Cliente desde 2018" },
+    { quote: "Restauraron el ropero de mi abuela. Quedó mejor que cuando era nuevo.", name: "Alfredo Adame", detail: "Cliente desde 2015" },
+    { quote: "Nada que ver con los muebles de tienda. Esto es otro nivel.", name: "El Ferras", detail: "Cliente desde 2022" },
   ],
   en: [
-    { quote: "My kitchen is 15 years old and still looks brand new. You can tell it's real wood.", name: "Doña Martha", detail: "Client since 2010" },
-    { quote: "I asked for a living room piece and it came out exactly as I imagined.", name: "Roberto", detail: "Client since 2018" },
-    { quote: "They restored my grandmother's wardrobe. It looks better than when it was new.", name: "García Family", detail: "Client since 2015" },
-    { quote: "Nothing like store-bought furniture. This is another level.", name: "Carlos & Ana", detail: "Client since 2022" },
+    { quote: "My kitchen is 15 years old and still looks brand new. You can tell it's real wood.", name: "Ángela Aguilar", detail: "Client since 2010" },
+    { quote: "I asked for a living room piece and it came out exactly as I imagined.", name: "El Señor de los Cielos", detail: "Client since 2018" },
+    { quote: "They restored my grandmother's wardrobe. It looks better than when it was new.", name: "Alfredo Adame", detail: "Client since 2015" },
+    { quote: "Nothing like store-bought furniture. This is another level.", name: "El Ferras", detail: "Client since 2022" },
   ],
 };
