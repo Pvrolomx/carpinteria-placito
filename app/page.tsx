@@ -471,7 +471,8 @@ export default function Home() {
         </p>
         <p className="text-[#8B6914] text-sm mt-1">{t.footer.tagline[lang]}</p>
         <p className="text-[#5a4a3a] text-xs mt-4">
-          Hecho por <a href="https://duendes.app" className="underline hover:text-[#c4b69a]">duendes.app</a> 2026
+          Hecho por <a href="https://duendes.app" className="underline hover:text-[#c4b69a]">duendes.app</a>{" "}
+          <a href="https://placito-payments.vercel.app/admin" className="hover:text-[#c4b69a]">2026</a>
         </p>
       </footer>
     </main>
