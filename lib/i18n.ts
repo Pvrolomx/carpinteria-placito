@@ -92,45 +92,73 @@ export const t = {
     title: { es: "Preguntas Frecuentes", en: "Frequently Asked Questions" },
     items: [
       {
-        q: { es: "¿Cuánto tiempo tarda un mueble a medida?", en: "How long does a custom piece take?" },
+        q: { es: "¿Cobras por cotización o visita?", en: "Do you charge for quotes or site visits?" },
         a: {
-          es: "Depende del tamaño y complejidad. Una cocina integral puede tomar 2-4 semanas. Un mueble pequeño, 1-2 semanas. Te damos fecha exacta al cotizar.",
-          en: "It depends on size and complexity. A full kitchen can take 2-4 weeks. A smaller piece, 1-2 weeks. We give you an exact date with your quote.",
+          es: "No. La cotización y la visita para tomar medidas son sin costo y sin compromiso. Nos interesa que tengas toda la información para decidir tranquilo.",
+          en: "No. Quotes and measurement visits are free with no obligation. We want you to have all the information you need to decide comfortably.",
         },
       },
       {
-        q: { es: "¿Trabajan solo con madera real?", en: "Do you only work with real wood?" },
+        q: { es: "¿Pides anticipo para iniciar un trabajo?", en: "Do you require a deposit to start?" },
         a: {
-          es: "Nuestra especialidad es madera maciza (cedro, roble, parota, pino). También ofrecemos aglomerado como opción económica para quien lo necesite.",
-          en: "Our specialty is solid wood (cedar, oak, parota, pine). We also offer particleboard as a budget-friendly option for those who need it.",
+          es: "Sí, pedimos un anticipo para la compra de materiales. El porcentaje depende del proyecto, pero lo acordamos antes de arrancar. Todo queda claro desde el inicio.",
+          en: "Yes, we ask for a deposit to purchase materials. The percentage depends on the project, but we agree on it before starting. Everything is clear from the beginning.",
         },
       },
       {
-        q: { es: "¿Hacen envíos fuera de Puerto Vallarta?", en: "Do you ship outside Puerto Vallarta?" },
+        q: { es: "¿Puedes trabajar sobre un diseño mío?", en: "Can you work from my own design?" },
         a: {
-          es: "Trabajamos principalmente en Puerto Vallarta y Bahía de Banderas. Para proyectos especiales fuera de la zona, platícanos por WhatsApp.",
-          en: "We primarily serve Puerto Vallarta and Bahía de Banderas. For special projects outside the area, reach out via WhatsApp.",
+          es: "¡Claro! Si traes una foto, un plano o una idea en servilleta, la hacemos realidad. También te ayudamos a ajustar detalles técnicos para que quede perfecto.",
+          en: "Absolutely! Whether you bring a photo, a blueprint, or a napkin sketch, we'll make it real. We also help you adjust technical details so it turns out perfect.",
         },
       },
       {
-        q: { es: "¿Puedo ver ejemplos de su trabajo?", en: "Can I see examples of your work?" },
+        q: { es: "¿Qué tipo de madera usas?", en: "What type of wood do you use?" },
         a: {
-          es: "¡Claro! Mándanos un WhatsApp y con gusto te compartimos fotos de trabajos recientes. También puedes visitar el taller.",
-          en: "Of course! Send us a WhatsApp and we'll gladly share photos of recent work. You can also visit the workshop.",
+          es: "Trabajamos principalmente con nogal, parota, cedro, roble y pino. La elección depende del uso, la estética que buscas y tu presupuesto. Te asesoramos para elegir la mejor opción.",
+          en: "We mainly work with walnut, parota, cedar, oak, and pine. The choice depends on the use, the look you want, and your budget. We'll help you pick the best option.",
         },
       },
       {
-        q: { es: "¿Cómo funciona el proceso de cotización?", en: "How does the quoting process work?" },
+        q: { es: "¿Usas laminados?", en: "Do you use laminates?" },
         a: {
-          es: "1) Nos mandas un WhatsApp con lo que necesitas. 2) Te hacemos preguntas sobre medidas y material. 3) Te damos precio y tiempo de entrega. Sin compromiso.",
-          en: "1) Send us a WhatsApp with what you need. 2) We ask about measurements and materials. 3) We give you a price and delivery time. No obligation.",
+          es: "Sí, también trabajamos con laminados y melaminas de buena calidad. Son una opción más económica que funciona muy bien para closets, cocinas y muebles de uso diario.",
+          en: "Yes, we also work with good quality laminates and melamine. They're a more affordable option that works great for closets, kitchens, and everyday furniture.",
         },
       },
       {
-        q: { es: "¿Ofrecen garantía?", en: "Do you offer a warranty?" },
+        q: { es: "¿La madera resiste la humedad de Puerto Vallarta?", en: "Does wood hold up in Puerto Vallarta's humidity?" },
         a: {
-          es: "Sí. Todos nuestros muebles tienen garantía. Si algo no queda como acordamos, lo arreglamos sin costo.",
-          en: "Yes. All our furniture comes with a warranty. If something isn't as agreed, we fix it at no cost.",
+          es: "Con el tratamiento adecuado, sí. Usamos selladores y acabados diseñados para clima tropical. Llevamos más de 40 años haciendo muebles aquí — sabemos cómo proteger la madera del calor y la humedad de la bahía.",
+          en: "With the right treatment, absolutely. We use sealants and finishes designed for tropical climates. We've been making furniture here for over 40 years — we know how to protect wood from the bay's heat and humidity.",
+        },
+      },
+      {
+        q: { es: "¿Garantizas tu trabajo?", en: "Do you guarantee your work?" },
+        a: {
+          es: "Sí. Respaldamos cada mueble que sale del taller. Si algo no queda como lo acordamos, lo arreglamos. Nuestro nombre está en cada pieza y eso nos lo tomamos en serio.",
+          en: "Yes. We stand behind every piece that leaves our workshop. If something isn't as agreed, we fix it. Our name is on every piece and we take that seriously.",
+        },
+      },
+      {
+        q: { es: "¿Haces reparaciones o solo muebles nuevos?", en: "Do you do repairs or only new furniture?" },
+        a: {
+          es: "Hacemos las dos cosas. Restauramos muebles antiguos, reparamos puertas, ajustamos closets y le damos nueva vida a piezas que ya tienen historia.",
+          en: "We do both. We restore antique furniture, repair doors, adjust closets, and bring new life to pieces that already have history.",
+        },
+      },
+      {
+        q: { es: "¿Haces trabajo para negocios o solo a particulares?", en: "Do you work for businesses or only private clients?" },
+        a: {
+          es: "Atendemos ambos. Hemos hecho cocinas para restaurantes, mobiliario para oficinas, exhibidores para tiendas y barras para bares. Si es de madera, lo hacemos.",
+          en: "We serve both. We've built kitchens for restaurants, office furniture, store displays, and bars. If it's made of wood, we make it.",
+        },
+      },
+      {
+        q: { es: "¿Atiendes toda la Bahía de Banderas?", en: "Do you serve all of Bahía de Banderas?" },
+        a: {
+          es: "Sí. Trabajamos en todo Puerto Vallarta, Nuevo Vallarta, Bucerías, Sayulita, Punta de Mita y alrededores. Para zonas más alejadas, platícanos y nos ponemos de acuerdo.",
+          en: "Yes. We work throughout Puerto Vallarta, Nuevo Vallarta, Bucerías, Sayulita, Punta de Mita, and surrounding areas. For more distant locations, let's talk and work something out.",
         },
       },
     ],
